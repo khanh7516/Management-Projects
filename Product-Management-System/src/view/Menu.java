@@ -39,7 +39,7 @@ public class Menu {
                 default -> System.out.println("Không có option " +option);
             }
             backToMenu();//nếu không có method này,
-                        // menu sẽ hiện thị ngay khi 1 trong các option được thực hiện
+                        //menu sẽ hiện thị ngay khi 1 trong các option được thực hiện
                        //buộc người xem phải kéo lên trên để xem kết quả
         }
     }
