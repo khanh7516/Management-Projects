@@ -25,7 +25,6 @@ public class Menu {
                     5. Tìm sản phẩm theo mức giá
                     6. Sắp xếp sản phẩm theo mức giá giảm dần/ tăng dần
                     0. Thoát khỏi chương trình
-                                                
                     """);
             int option = inputHandle.inputPositiveInt();
             switch (option) {
