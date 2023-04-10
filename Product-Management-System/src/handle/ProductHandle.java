@@ -27,7 +27,6 @@ public class ProductHandle {
         System.out.println("Nhập số lượng sản phẩm: ");
         int number = inputHandle.inputPositiveInt();
         productList = new Product[number];
-
         for (int i = 0; i < number; i++ ) {
             productList[i] = createProduct(i + 1);
         }
@@ -99,7 +98,7 @@ public class ProductHandle {
                 }
             }
         }
-        // In ra mảng đã sắp xếp
+        // In ra mảng đã sắp xếp tăng dần
         System.out.println("Danh sách sản phẩm theo thứ tự giá tăng dần:");
         for (Product product : productList) {
             System.out.println(product);
@@ -118,7 +117,7 @@ public class ProductHandle {
                 }
             }
         }
-        // In ra mảng đã sắp xếp
+        // In ra mảng đã sắp xếp giảm dần
         System.out.println("Danh sách sản phẩm theo thứ tự giá giảm dần:");
         for (Product product : productList) {
             System.out.println(product);
