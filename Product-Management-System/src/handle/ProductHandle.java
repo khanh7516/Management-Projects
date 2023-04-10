@@ -28,21 +28,15 @@ public class ProductHandle {
         System.out.println("Hãy tạo 1 danh sách sản phẩm!\nNhập số lượng sản phẩm: ");
         int number = inputHandle.inputPositiveInt();
         productList = new Product[number];
-        for (int i = 0; i < number; i++ ) {
-            productList[i] = createProduct(i + 1);
-        }
+        for (int i = 0; i < number; i++ ) productList[i] = createProduct(i + 1);
     }
     //hiển thị danh sách các sản phẩm
     public void displayProducts() {
-        for (Product product : productList) {
-            System.out.println(product);
-        }
+        for (Product product : productList) System.out.println(product);
     }
     //tìm sản phẩm theo id
     public Product findProductById(int id) {
-        for (Product product : productList) {
-            if (product.getId() == id) return product;
-        }
+        for (Product product : productList) if (product.getId() == id) return product;
         return null; // Không tìm thấy sản phẩm có id trùng với id đầu vào
     }
     //cập nhật số lượng của sản phẩm theo id
@@ -76,9 +70,7 @@ public class ProductHandle {
                 found = true;
             }
         }
-        if (!found) {
-            System.out.println("Không có sản phẩm nào có số lượng dưới " + quantity);
-        }
+        if (!found) System.out.println("Không có sản phẩm nào có số lượng dưới " + quantity);
     }
     //lọc sản phẩm theo giá
     public void filterByPrice(int option){
@@ -103,9 +95,7 @@ public class ProductHandle {
         }
         // In ra mảng đã sắp xếp tăng dần
         System.out.println("Danh sách sản phẩm theo thứ tự giá tăng dần:");
-        for (Product product : productList) {
-            System.out.println(product);
-        }
+        displayProducts();
     }
     //sắp xếp sản phẩm giảm dần theo giá bán
     public void sortByPriceDesc() {
@@ -122,8 +112,6 @@ public class ProductHandle {
         }
         // In ra mảng đã sắp xếp giảm dần
         System.out.println("Danh sách sản phẩm theo thứ tự giá giảm dần:");
-        for (Product product : productList) {
-            System.out.println(product);
-        }
+        displayProducts();
     }
 }
