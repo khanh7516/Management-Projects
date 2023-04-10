@@ -11,7 +11,7 @@ public class ProductHandle {
     public Product[] getProductList() {
         return productList;
     }
-
+    //khởi tạo một sản phẩm
     public Product createProduct(int i) {
         System.out.println("Nhập tên sản phẩm thứ: " + (i));
         String name = scanner.nextLine();
@@ -26,7 +26,7 @@ public class ProductHandle {
 
         return new Product(name, description, quantity, price, unit);
     }
-
+    //tạo danh sách các sản phẩm
     public void createListOfProduct() {
         System.out.println("Hãy tạo 1 danh sách sản phẩm!\nNhập số lượng sản phẩm: ");
         int number = inputHandle.inputPositiveInt();
@@ -35,19 +35,20 @@ public class ProductHandle {
             productList[i] = createProduct(i + 1);
         }
     }
+    //hiển thị danh sách các sản phẩm
     public void displayProducts() {
         for (Product product : productList) {
             System.out.println(product);
         }
     }
-
+    //tìm sản phẩm theo id
     public Product findProductById(int id) {
         for (Product product : productList) {
             if (product.getId() == id) return product;
         }
         return null; // Không tìm thấy sản phẩm có id trùng với id đầu vào
     }
-
+    //cập nhật số lượng của sản phẩm theo id
     public void updateQuantityById(int id) {
         Product updateProduct = findProductById(id);
         System.out.println(updateProduct);
@@ -55,6 +56,7 @@ public class ProductHandle {
         updateProduct.setQuantity(inputHandle.inputPositiveInt());
         System.out.println("Cập nhật số lượng thành công!\n" + updateProduct);
     }
+    //tìm sản phẩm theo tên
     public String findProductByName() {
         boolean check = false;
         System.out.println("Tên sản phẩm: ");
@@ -66,7 +68,7 @@ public class ProductHandle {
             }
         }return (!check)?"Không tìm thấy sản phảm có tên: " + name : "Đây là những sản phầm đã được tìm thấy ";
     }
-
+    //tìm sản phẩm theo số lượng ... trở xuống
     public void findProductByLowQuantity() {
         System.out.println("Nhập số lượng sản phẩm: ");
         int quantity = inputHandle.inputPositiveInt();
@@ -81,7 +83,7 @@ public class ProductHandle {
             System.out.println("Không có sản phẩm nào có số lượng dưới " + quantity);
         }
     }
-
+    //lọc sản phẩm theo giá
     public void filterByPrice(int option){
         for (Product product: productList) {
             if(product.getPrice()<50000 && option==1) System.out.println(product);
@@ -89,7 +91,7 @@ public class ProductHandle {
             else if(product.getPrice() > 100000 && option == 3) System.out.println(product);
         }
     }
-
+    //sắp xếp sản phẩm tăng dần theo giá bán
     public void sortByPriceAsce() {
         int n = productList.length;
         for (int i = 0; i < n - 1; i++) {
@@ -108,7 +110,7 @@ public class ProductHandle {
             System.out.println(product);
         }
     }
-
+    //sắp xếp sản phẩm giảm dần theo giá bán
     public void sortByPriceDesc() {
         int n = productList.length;
         for (int i = 0; i < n - 1; i++) {
