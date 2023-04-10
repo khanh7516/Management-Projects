@@ -8,6 +8,10 @@ public class ProductHandle {
     private final Scanner scanner = new Scanner(System.in);
     private final InputHandle inputHandle = new InputHandle();
 
+    public Product[] getProductList() {
+        return productList;
+    }
+
     public Product createProduct(int i) {
         System.out.println("Nhập tên sản phẩm thứ: " + (i));
         String name = scanner.nextLine();
@@ -24,7 +28,7 @@ public class ProductHandle {
     }
 
     public void createListOfProduct() {
-        System.out.println("Nhập số lượng sản phẩm: ");
+        System.out.println("Hãy tạo 1 danh sách sản phẩm!\nNhập số lượng sản phẩm: ");
         int number = inputHandle.inputPositiveInt();
         productList = new Product[number];
         for (int i = 0; i < number; i++ ) {

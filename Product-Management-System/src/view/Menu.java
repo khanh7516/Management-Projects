@@ -2,10 +2,8 @@ package view;
 
 import handle.InputHandle;
 import handle.ProductHandle;
-import java.util.Scanner;
 
 public class Menu {
-    private final Scanner scanner = new Scanner(System.in);
     InputHandle inputHandle = new InputHandle();
     ProductHandle productHandle;
     //hàm khởi tạo Menu truyền vào đối số productHandle đã được khởi tạo tử trước
