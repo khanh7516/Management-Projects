@@ -3,7 +3,7 @@ package handle;
 import java.util.Scanner;
 
 public class InputHandle {
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     public double inputPositiveDouble() {
         double result;

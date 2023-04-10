@@ -45,6 +45,7 @@ public class Menu {
     }
 
     //các method hiển thị các menu con đối với 1 vài option
+
     public void menuSetQuantityById() {
         System.out.println("Nhập id sản phẩm cần tìm!");
         int id = inputHandle.inputPositiveInt();
