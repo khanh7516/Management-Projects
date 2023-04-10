@@ -8,7 +8,7 @@ public class Menu {
     private final Scanner scanner = new Scanner(System.in);
     InputHandle inputHandle = new InputHandle();
     ProductHandle productHandle;
-    //hàm khởi tạo Menu truyền vào tham số productHandle đã được khởi tạo tử trước
+    //hàm khởi tạo Menu truyền vào đối số productHandle đã được khởi tạo tử trước
     public Menu(ProductHandle productHandle) {
         this.productHandle = productHandle;
     }
