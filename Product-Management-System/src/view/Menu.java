@@ -12,7 +12,7 @@ public class Menu {
     public Menu(ProductHandle productHandle) {
         this.productHandle = productHandle;
     }
-
+    //menu chính của chương trình
     public void displayMenu() {
         while (true) {
             System.out.println("-".repeat(50));
@@ -45,6 +45,7 @@ public class Menu {
                        //buộc người xem phải kéo lên trên để xem kết quả
         }
     }
+
     //các method hiển thị các menu con đối với 1 vài option
     public void menuSetQuantityById() {
         System.out.println("Nhập id sản phẩm cần tìm!");
