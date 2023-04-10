@@ -8,9 +8,6 @@ public class ProductHandle {
     private final Scanner scanner = new Scanner(System.in);
     private final InputHandle inputHandle = new InputHandle();
 
-    public Product[] getProductList() {
-        return productList;
-    }
     //khởi tạo một sản phẩm
     public Product createProduct(int i) {
         System.out.println("Nhập tên sản phẩm thứ: " + (i));
