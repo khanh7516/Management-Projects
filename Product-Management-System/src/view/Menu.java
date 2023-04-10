@@ -67,7 +67,6 @@ public class Menu {
             }
         }
     }
-
     public void menuSelectByPrice(){
         System.out.println("Bạn muốn tìm sản phẩm theo mức giá nào?\nChọn 3 option dưới đây:");
         System.out.println("""
@@ -82,7 +81,6 @@ public class Menu {
             default -> System.out.println("Không có option " + option);
         }
     }
-
     public void menuSortByPrice(){
         System.out.println("Bạn muốn sắp xếp sản phẩm theo mức giá: ");
         System.out.println("""
