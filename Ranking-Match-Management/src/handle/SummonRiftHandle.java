@@ -12,7 +12,6 @@ public class SummonRiftHandle {
     private final Scanner scanner = new Scanner(System.in);
     private final TeamHandle teamHandle = new TeamHandle();
 
-
     public SummonRift startMatch() {
         System.out.println("Nhập thời gian bắt đầu (yyyy-MM-dd HH:mm:ss): ");
         LocalDateTime startTime = dateTimeInput();
